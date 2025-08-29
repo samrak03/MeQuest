@@ -1,7 +1,7 @@
 model_id: TinyLlama/TinyLlama-1.1B-Chat-v1.0
-output_dir: outputs/tinyllama-lora
-train_file: data/train.jsonl
-eval_file: data/val.jsonl
+output_dir: /mnt/d/GitHub/MeQuest/meq-llm-lora/outputs/tinyllama-lora
+train_file: /mnt/d/GitHub/MeQuest/meq-llm-lora/data/train.jsonl
+eval_file: /mnt/d/GitHub/MeQuest/meq-llm-lora/data/val.jsonl
 
 # LoRA
 lora:

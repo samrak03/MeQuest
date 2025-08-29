@@ -79,7 +79,7 @@ def main(cfg):
         warmup_ratio=t["warmup_ratio"],
         weight_decay=t["weight_decay"],
         logging_steps=t["logging_steps"],
-        evaluation_strategy="steps",
+        # evaluation_strategy="steps",
         eval_steps=t["eval_steps"],
         save_steps=t["save_steps"],
         fp16=cfg["load"].get("fp16", False),
@@ -106,7 +106,7 @@ def main(cfg):
 if __name__ == "__main__":
     import sys
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config", type=str, default="configs/run.yaml")
+    parser.add_argument("--config", type=str, default="/mnt/d/GitHub/MeQuest/meq-llm-lora/configs/run.yaml")
     args = parser.parse_args()
     cfg = read_yaml(args.config)
     main(cfg)
