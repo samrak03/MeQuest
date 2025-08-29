@@ -1,0 +1,3 @@
+{"instruction":"인공지능이 뭐야?","input":"","output":"인공지능은 데이터를 학습해 문제를 해결하는 컴퓨터 시스템을 말해."}
+{"instruction":"WSL이 뭐지?","input":"","output":"WSL은 Windows에서 Linux 사용자 공간을 실행하는 기능이야."}
+{"instruction":"LoRA가 뭐야?","input":"","output":"LoRA는 큰 모델의 가중치 전체가 아니라 저랭크 어댑터만 학습해 가볍게 튜닝하는 기법이야."}

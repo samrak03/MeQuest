@@ -1,0 +1,31 @@
+model_id: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+output_dir: outputs/tinyllama-lora
+train_file: data/train.jsonl
+eval_file: data/val.jsonl
+
+# LoRA
+lora:
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+# 학습 하이퍼파라미터
+train:
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 2
+  num_train_epochs: 1
+  lr: 2.0e-4
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  logging_steps: 10
+  eval_steps: 50
+  save_steps: 200
+  max_seq_length: 1024
+
+# 로딩/정밀도
+load:
+  load_in_8bit: true       # 8-bit 로딩(메모리 절약). false면 fp16 로딩
+  bf16: false              # 50시리즈면 bf16 가능하지만 우선 끔
+  fp16: true               # 8-bit+fp16 혼합 연산
